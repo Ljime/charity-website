@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@400;600&display=swap');
+/* Containers */
+
+.header {
+    width: 100vw;
+    height: 8rem;
+    background-color: var(--color-pink); 
+    max-width: var(--max-width);
+	margin: 0 auto ; 
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+.iconContainer, .linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconContainer {
+    border-bottom: 1px solid var(--color-white);
+}
+
+.linkContainer {
+    flex: 1;
+}
+
+/* Elements */
+
+.ribbon{
+    fill: red;
+    stroke: var(--color-white);
+    stroke-width: 0.5;
+    width: 8rem;
+    transition: all .2s;
+}
+
+.container h3 {
+    font-size: 3rem;
+    color: red;
+}
+
+.ribbon:hover {
+    fill: var(--color-white);
+    stroke: red;
+}
+
+.rightContainer svg {
+    padding: 1rem;
+    width: 2rem;
+    height: 2rem;
+    transform: scale(1.6);
+    fill: var(--color-purple);
+    transition: all .2s;
+}
+
+.rightContainer svg:hover {
+    fill: var(--color-purple-dark-2);
+}
+
+.rightContainer a {
+    color: var(--color-purple-dark);
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Georoma', sans-serif;
+    padding: 1rem;
+    position: relative;
+    transition: all .2s;
+}
+
+.rightContainer a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    height: 0.5rem;
+    width: 1rem;
+    opacity: 0;
+    border-radius: 1rem;
+    transition: all .2s;
+}
+
+
+.rightContainer .active {
+    color: var(--color-purple-dark-2);
+}
+
+@media (max-width: 680px) {
+
+    .container h3 {
+        display: none;
+    }
+
+    .rightContainer a {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    .rightContainer svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 430px) {
+    
+}

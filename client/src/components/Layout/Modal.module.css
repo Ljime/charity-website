@@ -1,0 +1,95 @@
+.modal {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: calc(var(--max-width)/2);
+    background-color: var(--color-purple);
+    padding: 1rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all .2;
+    animation: scaleIn .2s;
+}
+
+.modalExiting {
+    animation: scaleOut .2s;
+}
+
+.modal h1 {
+    font-size: 3rem;
+}
+
+.modal p {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin: 1rem;
+    color: var(--color-white);
+
+}
+
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all .2s;
+    animation: fadeIn .2s;
+}
+
+.backdropExiting {
+    animation: fadeOut .2s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.1) translate(-50%, -50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.1) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+
