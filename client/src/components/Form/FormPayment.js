@@ -108,7 +108,7 @@ const FormPayment = (props) => {
             type: 'card',
             card: props.elements.getElement(CardElement)
         })
-		console.log(error)
+		console.log(error, 'Payment')
         if(!error) {
             try {
                 const {id} = paymentMethod
@@ -121,10 +121,12 @@ const FormPayment = (props) => {
                 if(response.data.success) {
                     setSuccess(true)
                 } else {
+					console.log('Response ', response)
 					setError(true)
 				}
             } catch (error) {
                 setError(true)
+				console.log('Server ', error)
             }
         } else {
 			setError(true)
