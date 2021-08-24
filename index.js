@@ -3,12 +3,15 @@ const stripePrivateKey = process.env.SECRET_STRIPE_KEY
 
 const express = require('express')
 const stripe = require('stripe')(stripePrivateKey)
+const cors = require('cors')
+const path = require("path")
 
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
-app.post('/payment', async (req, res) => {
+app.post('/payment', cors(), async (req, res) => {
     const {amount, id, currency} = req.body
     try {
         const payment = await stripe.paymentIntents.create({
