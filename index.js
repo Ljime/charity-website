@@ -1,5 +1,7 @@
 require('dotenv').config()
-const stripePrivateKey = process.env.SECRET_STRIPE_KEY
+const stripePrivateKey =
+	"sk_test_51JQEWDBXBNrU1eQLIFso90NODhW1nkMTlL8DhcttmIFSkPYHOqVttj7kMphJHPAHWtANL77J9AwvHp13qrW0FWN500Yg00h9UP"
+// process.env.SECRET_STRIPE_KEY
 
 const express = require('express')
 const stripe = require('stripe')(stripePrivateKey)
