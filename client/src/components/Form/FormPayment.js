@@ -108,6 +108,7 @@ const FormPayment = (props) => {
             type: 'card',
             card: props.elements.getElement(CardElement)
         })
+		console.log(error)
         if(!error) {
             try {
                 const {id} = paymentMethod
