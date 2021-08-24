@@ -1,6 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config()
-}
+require('dotenv').config()
 const stripePrivateKey = process.env.SECRET_STRIPE_KEY
 
 const express = require('express')
